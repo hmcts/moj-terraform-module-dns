@@ -3,5 +3,5 @@ resource "azurerm_dns_a_record" "a_record" {
   zone_name           = "${var.zone}"
   resource_group_name = "${var.resource_group}"
   ttl                 = 300
-  records             = "${var.destination}"
+  records             = ["${var.destination}"]
 }
